@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そた波情報アプリ</title>
+    <link rel="stylesheet" href="index/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>そた波情報アプリ 🌊</h1>
+    </header>
+
+    <main class="container">
+        <!-- 入力フォーム -->
+        <section class="form-section">
+            <h2>位置情報を入力または地図で選択</h2>
+            <form id="locationForm">
+                <label for="latitude">緯度:</label>
+                <input type="text" id="latitude" placeholder="例: 34.4127" required>
+
+                <label for="longitude">経度:</label>
+                <input type="text" id="longitude" placeholder="例: 133.2365" required>
+
+                <button type="submit">波データを取得</button>
+            </form>
+            <p>地図上で場所をクリックすると緯度・経度が自動入力されます。</p>
+            <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+        </section>
+
+        <!-- データ表示 -->
+        <section class="data-section">
+            <h2>波データ</h2>
+            <!-- アコーディオン形式の波データを表示 -->
+            <div id="accordion-container"></div> <!-- ここにアコーディオンデータが動的に追加されます -->
+            <!-- グラフ用のキャンバスを追加 -->
+            <canvas id="waveChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 そた波情報アプリ</p>
+    </footer>
+
+    <!-- Chart.jsの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Maps API を読み込み -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-8nn1YkywhWQACPulODHuEats0YBpXuY&callback=initMap"
+        async></script>
+    <!-- 自分のスクリプト -->
+    <script src="index/script.js"></script>
+</body>
+
+</html>

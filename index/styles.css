@@ -1,0 +1,170 @@
+/* Google Fonts をインポート */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500;700&display=swap');
+
+/* 全体のフォントを変更 */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* ハワイアンなイメージに変更 */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #f5deb3);
+    /* 青空から砂浜のグラデーション */
+    color: #333;
+}
+
+.header {
+    background-color: #ff4500;
+    /* サンセットオレンジ */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    /* ハワイアンなフォント */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-section,
+.data-section {
+    margin-bottom: 30px;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    background-color: #4fc3f7;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* フォームセクション */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ボタンのデザインを改善 */
+button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    /* グラデーション */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    /* ホバー時のアニメーション */
+}
+
+/* 表のスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+/* グラフとキャンバスの調整 */
+#waveChart {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    /* 背景を薄い白色に設定 */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 地図表示のスタイル */
+#map {
+    height: 400px;
+    /* 地図の高さ */
+    width: 100%;
+    /* 地図の幅 */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* フッターのデザインを改善 */
+.footer {
+    background-color: #2f4f4f;
+    /* ダークスレートグレー */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 新しく追加されたスタイル */
+/* 波データの行を横並びにするスタイル */
+.wave-data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 時間、波高、条件のスタイル */
+.wave-data-row .time,
+.wave-data-row .height,
+.wave-data-row .condition {
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+}
+
+/* 条件の背景色を設定 */
+.wave-data-row .condition {
+    color: #fff;
+    border-radius: 5px;
+}
